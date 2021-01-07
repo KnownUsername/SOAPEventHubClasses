@@ -1,11 +1,18 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
-//[DataContract]
+
+public class RootObject
+{
+    [JsonProperty("event")]
+    public Event Event { get; set; }
+    [JsonProperty("user")]
+    public User User { get; set; }
+}
+
 public enum EventStatus
 {
     open,
@@ -15,7 +22,6 @@ public enum EventStatus
     cancelled
 }
 
-//[DataContract]
 public class Event
 {
     int id;
@@ -26,66 +32,59 @@ public class Event
     string description;
     int slots;
     EventStatus status;
-    float entryFee;
+    int sportId;
     int teamMax;
+    /*
+    float? entryFee;
 
-    #region PROPERTIES
 
-  //  [DataMember]
-    [JsonProperty("id")]
-    public int Id { get => id; set => id = value; }
-    
-  //  [DataMember]
-    [JsonProperty("name")]
-    public string Name { get => name; set => name = value; } // Check for only alpahbet characters
-    
-  //  [DataMember]
-    [JsonProperty("initial_date")]
-    public DateTime StartDate { get => startDate; set => startDate = value; } // check if date > present
-
-//    [DataMember]
-    [JsonProperty("end_date")]
-    public DateTime EndDate { get => endDate; set => endDate = value; } // check if endDate > startDate + date > present
-
- //   [DataMember]
-    [JsonProperty("local")]
-    public string Local { get => local; set => local = value; }
-
-//    [DataMember]
-    [JsonProperty("description")]
-    public string Description { get => description; set => description = value; }
-
-  //  [DataMember]
-    [JsonProperty("slots")]
-    public int Slots { get => slots; set => slots = value; } // only values > 0
-
-//    [DataMember]
-    [JsonProperty("status")]
-    public EventStatus Status { get => status; set => status = value; }
-
-//    [DataMember]
-    [JsonProperty("entryfee")]
-    public float EntryFee { get => entryFee; set => entryFee = value; }
-
-   // [DataMember]
-    [JsonProperty("teamMax")]
-    public int TeamMax { get => teamMax; set => teamMax = value; } // only values > 0
-    #endregion
-
-    /* Data Structures */
+    Data Structures 
     Dictionary<Team, DateTime> teams;
     List<Prize> prizeChart;
+    */
 
-    public bool AddTeam(Team teamToAdd)
-    {
-        // check for space and if new team is null   +   lidar com slots
-        return false;
-    }
+    #region PROPERTIES
+    [JsonProperty("id")]
+    public int Id { get => id; set => id = value; }
+    [JsonProperty("name")]
+    public string Name { get => name; set => name = value; } // Check for only alpahbet characters
+    [JsonProperty("initial_Date")]
+    public DateTime StartDate { get => startDate; set => startDate = value; } // check if date > present
+    [JsonProperty("end_Date")]
+    public DateTime EndDate { get => endDate; set => endDate = value; } // check if endDate > startDate + date > present
+    [JsonProperty("description")]
+    public string Description { get => description; set => description = value; }
+    [JsonProperty("slots")]
+    public int Slots { get => slots; set => slots = value; } // only values > 0
+    [JsonProperty("local")]
+    public string Local { get => local; set => local = value; }
+    [JsonProperty("status")]
+    public EventStatus Status { get => status; set => status = value; }
+    [JsonProperty("sportId")]
+    public int SportId { get => sportId; set => sportId = value; }
+    [JsonProperty("team_Max")]
+    public int TeamMax { get => teamMax; set => teamMax = value; }
+    /*
+    public float? EntrFee { get => entryFee; set => entryFee = value; }
 
+    public Dictionary<Team, DateTime> Teams { get => teams; set => teams = value; }
+    public List<Prize> PrizeChart { get => prizeChart; set => prizeChart = value; }
+    */
+    #endregion
     public Event()
     {
-        teams = new Dictionary<Team, DateTime>();
-        prizeChart = new List<Prize>();
-    }
-}
 
+    }
+
+    public bool ValidateObject()
+    {
+        if (1 == 1) return true;
+        /*
+         * return false;
+         * teams = new Dictionary<Team, DateTime>(); 
+        prizeChart = new List<Prize>();
+        */
+    }
+
+
+}

@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Threading.Tasks;
 
-//[DataContract]
+
 public class Account
 {
+    int acccountId;
     string address;
     string shippingAddress;
     string bankId;
 
     #region PROPERTIES
-  //  [DataMember]
     public string Address { get => address; set => address = value; }
-    //[DataMember]
     public string ShippingAddress { get => shippingAddress; set => shippingAddress = value; }
-    //[DataMember]
     public string BankId { get => bankId; set => bankId = value; }
+    public int AccountId { get => AccountId; set => AccountId = value; }
     #endregion
 
     public Account()
@@ -25,4 +23,3 @@ public class Account
 
     }
 }
-

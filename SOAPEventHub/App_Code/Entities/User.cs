@@ -2,32 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Runtime.Serialization;
 
-//[DataContract]
+
 public class User
 {
     int id;
     string name;
     string email;
     string password;
-    Account account;
+    public Account account;
 
     #region PROPERTIES
-   // [DataMember]
-    public int Id { get => id; set => id = value; }
-    //[DataMember]
-    public string Name { get => name; set => name = value; }
-   // [DataMember]
-    public string Email { get => email; set => email = value; }
-    //[DataMember]
-    public string Password { get => password; set => password = value; }
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public string Email { get; set; }
+    public string Password { get; set; }
+    public Account Account { get; set; }
     #endregion
 
 
     public User()
     {
-        account = new Account();
+
     }
 
     public User(string name, string email, string password)
@@ -39,6 +35,12 @@ public class User
     public bool CheckCredentials()
     {
         return true;
+    }
+
+    public bool ValidateObject()
+    {
+        if (1 == 1) return true;
+        //return false;
     }
     #endregion
 
