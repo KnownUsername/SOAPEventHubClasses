@@ -10,6 +10,6 @@ using System.Text;
 public class Service : IService
 {
 
-	public void AssignClasses(Account account, Event eventA, Prize prize, Sport sport, Team team, User user) { }
+	public void AssignClasses(Account account, Event eventA, Prize prize, Sport sport, Team team, User user, RootObject rootObject) { }
 
 }

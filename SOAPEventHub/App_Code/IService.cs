@@ -12,7 +12,6 @@ public interface IService
 {
 
 	[OperationContract]
-	void AssignClasses(Account account, Event eventA, Prize prize, Sport sport, Team team, User user);
+	void AssignClasses(Account account, Event eventA, Prize prize, Sport sport, Team team, User user, RootObject rootObject);
 
-	// TODO: Add your service operations here
 }
