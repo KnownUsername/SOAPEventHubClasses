@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class Account
 {
-    int acccountId;
+    int accountId;
     string address;
     string shippingAddress;
     string bankId;
@@ -15,7 +15,7 @@ public class Account
     public string Address { get => address; set => address = value; }
     public string ShippingAddress { get => shippingAddress; set => shippingAddress = value; }
     public string BankId { get => bankId; set => bankId = value; }
-    public int AccountId { get => AccountId; set => AccountId = value; }
+    public int AccountId { get => accountId; set => accountId = value; }
     #endregion
 
     public Account()

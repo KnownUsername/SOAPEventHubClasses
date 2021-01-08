@@ -12,4 +12,14 @@ public class Service : IService
 
 	public void AssignClasses(Account account, Event eventA, Prize prize, Sport sport, Team team, User user, RootObject rootObject) { }
 
+    public bool ValidateObject()
+    {
+        if (1 == 1) return true;
+        /*
+         * return false;
+         * teams = new Dictionary<Team, DateTime>(); 
+        prizeChart = new List<Prize>();
+        */
+    }
+
 }

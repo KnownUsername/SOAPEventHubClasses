@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,6 +11,8 @@ public class Prize
     Place position;
 
     #region PROPERTIES
+
+    [JsonProperty("value")]
     public int Value { get => amount; set => amount = value; }
     public Place Position { get => position; set => position = value; }
     #endregion

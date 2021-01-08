@@ -13,5 +13,17 @@ public interface IService
 
 	[OperationContract]
 	void AssignClasses(Account account, Event eventA, Prize prize, Sport sport, Team team, User user, RootObject rootObject);
+	
+	//[OperationContract]
+	//bool ValidateObject();
+
+
+}
+
+[ServiceContract]
+public interface IEvent
+{
+	[OperationContract]
+	bool ValidateObject();
 
 }

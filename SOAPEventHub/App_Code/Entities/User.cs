@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 public class User
 {
-    int id;
+    int id, accountId;
     string name;
     string email;
     string password;
-    public Account account;
 
     #region PROPERTIES
-    public int ID { get; set; }
-    public string Name { get; set; }
-    public string Email { get; set; }
-    public string Password { get; set; }
-    public Account Account { get; set; }
+
+    public int Id { get => id; set => id = value; }
+    public string Name { get => name; set => name = value; }
+    public string Email { get => email; set => email = value; }
+    public string Password { get => password; set => password = value; }
+    public int AccountId { get => accountId; set => accountId = value; }
     #endregion
 
 

@@ -24,9 +24,9 @@ public class Team
     Place position;
 
     #region PROPERTIES
-    int Id { get; set; }
-    List<User> Members { get; set; }
-    Place Place { get; set; }
+    int Id { get => id; set => id = value; }
+    List<User> Members { get => members; set => members = value; }
+    Place Position { get => position; set => position = value; }
     #endregion
 
     public Team()
