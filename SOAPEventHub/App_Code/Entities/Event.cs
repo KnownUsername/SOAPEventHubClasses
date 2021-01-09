@@ -34,10 +34,11 @@ public class Event
     string description;
     int slots;
     EventStatus status;
+    float? entryFee;
     int sportId;
     int teamMax;
     
-    float? entryFee;
+    
 
     /*
     Data Structures 
@@ -52,10 +53,10 @@ public class Event
     [JsonProperty("name")]
     public string Name { get => name; set => name = value; } // Check for only alpahbet characters
     
-    [JsonProperty("initial_Date")]
+    [JsonProperty("initialdate")]
     public DateTime InitialDate { get => initialDate; set => initialDate = value; } // check if date > present
     
-    [JsonProperty("end_Date")]
+    [JsonProperty("enddate")]
     public DateTime EndDate { get => endDate; set => endDate = value; } // check if endDate > startDate + date > present
     
     [JsonProperty("description")]
@@ -66,17 +67,19 @@ public class Event
     
     [JsonProperty("local")]
     public string Local { get => local; set => local = value; }
-    
+    [JsonProperty("entryFee")]
+    public float? EntryFee { get => entryFee; set => entryFee = value; }
+
     [JsonProperty("status")]
     public EventStatus Status { get => status; set => status = value; }
     
     [JsonProperty("sportId")]
     public int SportId { get => sportId; set => sportId = value; }
     
-    [JsonProperty("team_Max")]
+    [JsonProperty("teamMax")]
     public int TeamMax { get => teamMax; set => teamMax = value; }
     
-    public float? EntryFee { get => entryFee; set => entryFee = value; }
+    
 
     /*
     public Dictionary<Team, DateTime> Teams { get => teams; set => teams = value; }

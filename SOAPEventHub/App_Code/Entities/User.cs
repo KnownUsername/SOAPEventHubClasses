@@ -28,7 +28,6 @@ public class User
 
     public User(string name, string email, string password)
     {
-        account = new Account();
     }
 
     #region FUNCTIONS
