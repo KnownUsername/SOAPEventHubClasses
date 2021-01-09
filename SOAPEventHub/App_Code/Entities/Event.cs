@@ -37,7 +37,7 @@ public class Event
     float? entryFee;
     int sportId;
     int teamMax;
-    
+    int userId;
     
 
     /*
@@ -79,8 +79,7 @@ public class Event
     [JsonProperty("teamMax")]
     public int TeamMax { get => teamMax; set => teamMax = value; }
     
-    
-
+    public int UserId { get => userId; set => userId = value; }
     /*
     public Dictionary<Team, DateTime> Teams { get => teams; set => teams = value; }
     public List<Prize> PrizeChart { get => prizeChart; set => prizeChart = value; }
