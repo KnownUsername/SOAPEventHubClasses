@@ -12,6 +12,14 @@ public class RootObject
     public Event Event { get; set; }
     [JsonProperty("user")]
     public User User { get; set; }
+    [JsonProperty("sport")]
+    public Sport Sport { get; set; }
+    [JsonProperty("team")]
+    public Team Team { get; set; }
+    [JsonProperty("account")]
+    public Account Account { get; set; }
+    [JsonProperty("prize")]
+    public Prize Prize { get; set; }
 }
 
 public enum EventStatus

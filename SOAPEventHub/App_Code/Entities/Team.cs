@@ -20,13 +20,13 @@ public enum Place
 public class Team
 {
     int id;
-    List<User> members;
+    //List<User> members;
     Place position;
 
     #region PROPERTIES
-    int Id { get => id; set => id = value; }
-    List<User> Members { get => members; set => members = value; }
-    Place Position { get => position; set => position = value; }
+    public int Id { get => id; set => id = value; }
+    //List<User> Members { get => members; set => members = value; }
+    public Place Position { get => position; set => position = value; }
     #endregion
 
     public Team()
